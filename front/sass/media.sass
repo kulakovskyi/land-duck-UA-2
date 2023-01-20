@@ -450,7 +450,7 @@
         width: 287px
       &-ducks
         transform: scale(0.65)
-        left: 40px
+        left: 70px
         bottom: -165px
       &-duckCount
         transform: scale(0.7)
@@ -500,6 +500,12 @@
     &__main
       &-duckCount
         bottom: 18%
+
+@media screen and (max-width: 1135px) and (min-height: 830px)
+  .bonus
+    &__main
+      &-duckCount
+        bottom: 11%
 
 
 @media screen and (max-width: 1125px) and (min-height: 770px)
@@ -554,26 +560,62 @@
     &__main
       &-txt
         margin: 0 37px 0 0
-        left: 105px
+        left: 85px
+        top: -67px
+      &-ducks
+        left: 120px
 
 @media screen and (max-width: 1040px) and (orientation: landscape)
   .bonus
     &__main
       &-txt
-        margin: 0 37px 0 0
-        left: 125px
+        top: -97px
+        left: 145px
+      &-duckCount
+        right: 100px
+      &-ducks
+        left: 130px
+
+
+@media screen and (max-width: 1040px) and (orientation: landscape) and (max-height: 770px)
+  .bonus
+    &__main
+      &-ducks
+        left: 110px
+
+@media screen and (max-width: 1040px) and (orientation: landscape) and (max-height: 665px)
+  .bonus
+    &__main
+      &-ducks
+        left: 180px
+
+
+@media screen and (max-width: 1015px) and (orientation: landscape) and (min-height: 800px)
+  .bonus
+    &__main
+      &-txt
+        left: 85px
+      &-ducks
+        bottom: -115px
+        left: 110px
 
 @media screen and (max-width: 995px) and (orientation: landscape)
   .bonus
     &__main
       &-txt
         left: 145px
+      &-ship
+        width: 203px
 
 @media screen and (max-width: 925px) and (orientation: landscape)
   .bonus
     &__main
       &-txt
         left: 155px
+      &-duckCount
+        right: 130px
+      &-ducks
+        left: 140px
 
 
 /************************************TABLET************************************/
@@ -615,7 +657,7 @@
         width: 436px
         height: 210px
         bottom: auto
-        top: 33%
+        top: 28%
         left: -2%
       &-duckCount
         transform: scale(.8)
@@ -669,10 +711,19 @@
     &__main
       padding: 130px 0 110px 0
       &-wrapper
-        transform: translateX(-50%) scale(0.87)
-        bottom: 0
+        transform: translateX(-50%) scale(1)
+        bottom: -60px
+      &-duckCount
+        transform-origin: right bottom
+        transform: scale(0.7)
+        bottom: 70px
+        right: -70px
+      &-ship
+        width: 336px
       &-txt
         &-top
+          display: flex
+          flex-direction: column
           font-size: 52px
           line-height: 57px
           span:last-child
@@ -688,26 +739,29 @@
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.8)
-        bottom: -20px
+        transform: translateX(-50%) scale(.9)
 
 @media screen and (max-width: 860px) and (orientation: portrait) and (max-height: 965px)
   .bonus
     &__main
+      padding: 130px 0 100px 0
       &-wrapper
-        transform: translateX(-50%) scale(0.7)
-        bottom: 80px
+        transform: translateX(-50%) scale(0.85)
+        bottom: -30px
 
 @media screen and (max-width: 860px) and (orientation: portrait) and (max-height: 920px)
   .bonus
     &__main
-      padding: 110px 0 110px 0
+      padding: 110px 0 100px 0
       &-logo
         width: 319px
       &-txt
         &-top
           transform-origin: top center
           transform: scale(0.9)
+      &-wrapper
+        transform: translateX(-50%) scale(0.8)
+        bottom: -20px
 
 @media screen and (max-width: 760px) and (orientation: portrait)
   .bonus
@@ -715,14 +769,18 @@
       &-text
         font-size: 8px
         line-height: 15px
+    &__main
+      &-ship
+        width: 266px
 
 
 @media screen and (max-width: 725px) and (orientation: portrait) and (max-height: 985px)
   .bonus
     &__main
+      padding: 130px 0 100px 0
       &-wrapper
-        transform: translateX(-50%) scale(0.75)
-        bottom: 70px
+        transform: translateX(-50%) scale(0.87)
+        bottom: -34px
 
 /************************************MOBILE************************************/
 
