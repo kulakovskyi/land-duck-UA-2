@@ -9,12 +9,13 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       popupSecond = document.querySelector('.bonus__secondWin'),
       overflow = document.querySelector('body'),
       wrapper = document.querySelector('.bonus'),
-      rotateText = document.querySelector('.bonus__main-txt-center')
+      rotateText = document.querySelector('.bonus__main-duckCount-counter'),
+      mainShip = document.querySelector('.bonus__main-ship')
 
 
 
 let triesCounter = 0
-let textAfterRotate = 'У тебе <span>1</span> спроби';
+let textAfterRotate = 'У тебе <br> 1 спроба';
 
 playBtn.addEventListener('click', () => {
     if (triesCounter === 0) {
@@ -43,6 +44,7 @@ function doAfterFirstRotation() {
     displayPopup(popupFirst)
     wrapper.style.pointerEvents = 'auto'
     overflow.style.overflow = 'hidden'
+    mainShip.classList.add('_afterRotate');
     setTimeout(() => {
         playBtn.classList.add('pulse-btn')
         playBtn.style.cursor = 'pointer'

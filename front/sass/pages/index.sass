@@ -244,9 +244,90 @@ body
       width: 473px
       height: 238px
       background: url("../img/ship-1.png") no-repeat 0 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: url("../img/ship-1-mob.png") no-repeat 0 0%/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/ship-1-mob.png") no-repeat 0 0/contain
       bottom: 38%
       left: 32%
       animation: ship-rocking 3.2s infinite
+      &._afterRotate
+        background: url("../img/ship-2.png") no-repeat 0 0/contain
+        animation: none
+    &-airplane
+      width: 340px
+      height: 150px
+      position: absolute
+      top: 50px
+      animation: 12s airplane linear infinite
+      background: url("../img/airplane-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: url("../img/airplane-mob.png") no-repeat 0 0%/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/airplane-mob.png") no-repeat 0 0/contain
+    &-container,
+    &-container2
+      position: relative
+    &-duckCount
+      position: absolute
+      bottom: 7%
+      right: -72px
+      z-index: 6
+      &-wrapper
+        position: relative
+      &-duckMin
+        width: 213px
+        height: 185px
+        background: url("../img/duck-min.png") no-repeat 0 0/contain
+        transform: scale(-1, 1)
+        position: relative
+        z-index: 1
+        animation: 1s jump-duck-count linear infinite
+        animation-delay: 0.3s
+
+      &-counter
+        position: absolute
+        top: -100px
+        left: -120px
+        text-align: center
+        width: 230px
+        height: 160px
+        padding: 30px 0 0 0
+        background: url("../img/plush.png") no-repeat 0 0/contain
+        font-family: $font-suisse-bold
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        font-size: 30px
+        line-height: 32px
+        color: $blue
+    &-ducks
+      position: absolute
+      bottom: -170px
+      left: -170px
+      &-wrapper
+        display: flex
+        align-items: flex-end
+      &-duckMin
+        width: 213px
+        height: 185px
+        background: url("../img/duck-min.png") no-repeat 0 0/contain
+        &:first-child
+          animation: 1s jump-duck linear infinite
+        &:nth-child(2)
+          animation: 1s jump-duck linear infinite
+          animation-delay: 0.5s
+        &:nth-child(3)
+          animation: 1s jump-duck linear infinite
+          animation-delay: .7s
+      &-duckBig
+        animation: 1s jump-duck linear infinite
+        animation-delay: 0.2s
+        position: relative
+        left: -20px
+        width: 232px
+        height: 270px
+        background: url("../img/duck-big-desc.png") no-repeat 0 0/contain
+
     &-wrapper
       position: relative
       z-index: 2
@@ -438,6 +519,28 @@ body
 @keyframes ship-rocking
   50%
     transform: rotateZ(4deg) translateY(-4px)
+
+@keyframes airplane
+  0%
+    left: -100%
+  100%
+    left: 100%
+
+@keyframes jump-duck
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(10px)
+  100%
+    transform: translateY(0)
+
+@keyframes jump-duck-count
+  0%
+    transform: scale(-1, 1) translateY(0)
+  50%
+    transform: scale(-1, 1) translateY(10px)
+  100%
+    transform: scale(-1, 1) translateY(0)
 
 .hide
   display: none
