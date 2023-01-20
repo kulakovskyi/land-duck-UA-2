@@ -99,31 +99,31 @@
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(1.2)
+      transform: scale(.9)
 
 @media screen and (max-width: 1930px) and (max-height: 820px)
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(1.1)
+      transform: scale(.8)
 
 @media screen and (max-width: 1930px) and (max-height: 750px)
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(1)
+      transform: scale(.7)
 
 @media screen and (max-width: 1930px) and (max-height: 670px)
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(.9)
+      transform: scale(.6)
 
 @media screen and (max-width: 1930px) and (max-height: 590px)
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(.8)
+      transform: scale(.5)
 
 @media screen and (max-width: 1700px)
   .bonus
@@ -171,7 +171,7 @@
 
 @media screen and (max-width: 1700px) and (max-height: 815px)
   .bonus
-    background: #005 url(../img/bg-desc.jpg) no-repeat 50% -45px/cover
+    //background: #005 url(../img/bg-desc.jpg) no-repeat 50% -45px/cover
     &__main
       &-logo
         width: 377px
@@ -788,17 +788,18 @@
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(1)
+      transform: scale(.85)
     &__main
-      padding: 70px 0 15px 0
+      padding: 100px 0 15px 0
       &::before
-        bottom: 0
+        bottom: -15px
+        height: 170px
       &-logo
         width: 175px
       &-txt
         &-top
-          font-size: 29px
-          line-height: 32px
+          font-size: 36px
+          line-height: 41px
           span:last-child::after
             font-size: 17px
             line-height: 22px
@@ -808,8 +809,28 @@
           font-size: 11px
           line-height: 21px
       &-wrapper
-        transform: translateX(-50%) scale(0.57)
-        bottom: 90px
+        transform: translateX(-50%) scale(0.64)
+        bottom: -20px
+      &-wheel
+        &-btn
+          width: 170px
+          height: 220px
+          z-index: 5
+          left: 5px
+          top: -167px
+
+      &-airplane
+        width: 140px
+      &-ship
+        width: 180px
+      &-duckCount
+        transform: scale(0.4) rotate(-37deg)
+        bottom: 100px
+        right: -110px
+        &-counter
+          transform: rotate(37deg)
+          top: -150px
+          left: -20px
     &__footer
       position: static
       min-height: 335px
@@ -866,7 +887,7 @@
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.52)
+        transform: translateX(-50%) scale(0.6)
 
 @media screen and (max-width: 405px) and (min-height: 720px) and (orientation: portrait)
   .bonus
@@ -887,40 +908,45 @@
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.49)
+        transform: translateX(-50%) scale(0.56)
 
 @media screen and (max-width: 380px) and (max-height: 570px) and (orientation: portrait)
   .bonus
+    background-position: 50% 30%
+    &__firstWin,
+    &__secondWin
+      transform: scale(.7)
     &__main
+      padding: 80px 0 15px 0
       &-wrapper
-        transform: translateX(-50%) scale(0.4)
-        bottom: 65px
+        transform: translateX(-50%) scale(0.47)
+        bottom: -15px
 
 
 @media screen and (max-width: 370px) and (max-height: 750px) and (orientation: portrait)
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.47)
+        transform: translateX(-50%) scale(0.55)
 
 @media screen and (max-width: 370px) and (max-height: 650px) and (orientation: portrait)
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.47)
+        transform: translateX(-50%) scale(0.53)
 
 @media screen and (max-width: 370px) and (max-height: 600px) and (orientation: portrait)
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.4)
-        bottom: 85px
+        transform: translateX(-50%) scale(0.47)
+        bottom: -5px
 
 @media screen and (max-width: 365px) and (orientation: portrait)
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(.8)
+      transform: scale(.65)
 
 @media screen and (max-width: 340px) and (orientation: portrait)
   .bonus
@@ -935,7 +961,7 @@
       &-logo
         width: 155px
       &-wrapper
-        transform: translateX(-50%) scale(0.43)
+        transform: translateX(-50%) scale(0.5)
       &-txt
         &-bottom
           font-size: 10px
@@ -950,7 +976,7 @@
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-50%) scale(0.4)
+        transform: translateX(-50%) scale(0.46)
 
 /************************************LANDSCAPE************************************/
 
@@ -964,6 +990,27 @@
       line-height: 10px
       height: 44px
     &__main
+      padding: 160px 0 0 0
+      &-ship
+        bottom: 29%
+        left: 41%
+      &-airplane
+        width: 120px
+        top: 8px
+      &-ducks
+        bottom: -145px
+        &-duckMin
+            background: url("../img/duck-min-mob.png") no-repeat 0 0/contain
+        &-duckBig
+          background: url("../img/duck-big-mob.png") no-repeat 0 0/contain
+      &-duckCount
+        bottom: 200px
+        &-counter
+          left: -70px
+          top: -80px
+          transform: scale(.8)
+        &-duckMin
+          background: url("../img/duck-min-mob.png") no-repeat 0 0/contain
       &-logo
         width: 145px
       &-txt
@@ -975,6 +1022,7 @@
         transform: scale(0.4)
         bottom: 300px
     &__footer
+      position: static
       bottom: 0
       padding: 0 15px
       height: 75px
@@ -986,34 +1034,41 @@
         transform-origin: right center
         transform: scale(0.8)
 
-@media screen and (max-width: 920px) and (max-height: 400px)
+@media screen and (max-width: 920px) and (max-height: 425px)
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(.7)
+      transform: scale(.55)
     &__main
-      &-wrapper
-        transform: scale(.35)
-        bottom: 320px
+      &-txt
+        top: -97px
+      &-ducks
+        bottom: -115px
+      &-duckCount
+        bottom: 230px
 
 @media screen and (max-width: 920px) and (max-height: 360px)
   .bonus
+    background-position: 50% 70%
     &__firstWin,
     &__secondWin
-      transform: scale(.6)
+      transform: scale(.45)
     &__main
       &-wrapper
-        transform: scale(.3)
-        bottom: 350px
+        transform: scale(.37)
+        bottom: 320px
+      &-ship
+        bottom: 21%
       &-txt
         transform: scale(0.5)
+      &-ducks
+        bottom: -85px
+      &-duckCount
+        bottom: 260px
 
 @media screen and (max-width: 920px) and (max-height: 325px)
   .bonus
     &__main
-      &-wrapper
-        transform: scale(.27)
-        bottom: 360px
       &-txt
         transform: scale(0.47)
 
@@ -1021,26 +1076,41 @@
   .bonus
     &__firstWin,
     &__secondWin
-      transform: scale(.5)
+      transform: scale(.35)
     &__main
+      &-ducks
+        bottom: -65px
+      &-duckCount
+        bottom: 275px
       &-wrapper
-        transform: scale(.25)
-        bottom: 375px
-      &-txt
-        transform: scale(0.42)
+        transform: scale(.35)
+
 
 @media screen and (max-width: 765px) and (orientation: landscape)
-  .land
+  .bonus
     &__footer
       &-text
         font-size: 8px
         line-height: 14px
+    &__main
+      &-ship
+        left: 34%
+      &-ducks
+        left: 190px
+      &-duckCount
+        right: 170px
 
 @media screen and (max-width: 750px) and (orientation: landscape)
   .bonus
     &__main
       &-txt
         margin: 0 -13px 0 -70px
+      &-ship
+        left: 34%
+      &-ducks
+        left: 190px
+      &-duckCount
+        right: 170px
 
 @media screen and (max-width: 720px) and (orientation: landscape)
   .bonus
@@ -1060,24 +1130,29 @@
     &__main
       &-txt
         margin: 0 -123px 0 -10px
-      &-wrapper
-        transform: scale(0.32)
+        left: 75px
+      &-ship
+        left: 33%
+        width: 157px
       &-txt
         transform: scale(0.5)
+      &-ducks
+        left: 120px
+      &-duckCount
+        right: 210px
 
 @media screen and (max-width: 600px) and (orientation: landscape) and (max-height: 365px)
   .bonus
     &__main
-      &-wrapper
-        transform: scale(0.28)
       &-txt
         transform: scale(0.47)
+      &-ducks
+        left: 100px
+      &-duckCount
+        right: 190px
 
 @media screen and (max-width: 600px) and (orientation: landscape) and (max-height: 330px)
   .bonus
     &__main
-      &-wrapper
-        transform: scale(0.25)
-        bottom: 355px
       &-txt
         transform: scale(0.42)

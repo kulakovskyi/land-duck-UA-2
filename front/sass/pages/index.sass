@@ -54,33 +54,41 @@ body
     transition: opacity 1s linear, visibility .5s linear
   &__firstWin,
   &__secondWin
-    width: 340px
-    min-width: 340px
-    height: 435px
-    background: url('../img/popup-bg.png') no-repeat 50% 0/contain
-    transform: scale(1.4)
+    width: 400px
+    min-width: 400px
+    height: 640px
+    background: url('../img/popup-bg.jpg') no-repeat 50% 0/contain
+    transform: scale(1)
+    border-radius: 10px
   &__firstWin
-    padding: 33px 35px 40px
+    padding: 47px 25px 47px
     &-info
       display: flex
       flex-direction: column
       height: 100%
     &-title
       font-family: $font-suisse-semb
-      font-size: 18px
-      line-height: 23px
+      font-size: 24px
+      line-height: 31px
       text-align: center
       letter-spacing: 0.03em
       text-transform: uppercase
+      margin: 0 0 60px 0
+      color: $grey
+    &-img
+      align-self: center
+      width: 155px
+      height: 75px
+      background: url("../img/popup-img-1.png") no-repeat 50% 0/contain
       margin: 0 0 20px 0
     &-win
       font-family: $font-suisse-bold
-      font-size: 66px
-      line-height: 86px
+      font-size: 64px
+      line-height: 66px
       text-align: center
       letter-spacing: 0.02em
-      color: $magenta
-      margin: 0 0 47px 0
+      color: $grey
+      margin: 0 0 100px 0
     &-text
       flex: 1 1 auto
       font-family: $font-suisse-semb
@@ -88,17 +96,18 @@ body
       line-height: 21px
       text-align: center
       letter-spacing: 0.03em
-      color: #292929
+      color: $grey
+      margin: 0 0 65px 0
       span
         font-family: $font-suisse-semb
         color: $magenta
     &-btn
       cursor: pointer
       font-family: $font-suisse-semb
-      padding: 19px 15px 17px
+      padding: 24px 15px 22px
       text-align: center
-      font-size: 16px
-      line-height: 21px
+      font-size: 18px
+      line-height: 23px
       letter-spacing: 0.07em
       text-transform: uppercase
       border-radius: 4px
@@ -116,48 +125,60 @@ body
       height: 100%
     &-title
       font-family: $font-suisse-semb
-      font-size: 18px
-      line-height: 23px
+      font-size: 24px
+      line-height: 31px
       text-align: center
       letter-spacing: 0.03em
       text-transform: uppercase
-      color: #292929
-      margin: 0 0 10px 0
+      color: $grey
+      margin: 0 0 30px 0
+    &-img
+      align-self: center
+      width: 165px
+      height: 80px
+      background: url("../img/popup-img-2.png") no-repeat 50% 0/contain
+      margin: 0 0 6px 0
     &-win
+      flex: 1 1 auto
       font-family: $font-suisse-bold
-      font-size: 48px
-      line-height: 53px
+      display: flex
+      color: $grey
+      flex-direction: column
+      align-items: center
       text-align: center
       letter-spacing: 0.02em
-      color: $magenta
       margin: 0 0 15px 0
       position: relative
-      &::before
-        content: '+'
-        position: absolute
+      text-transform: uppercase
+      &-top
         font-family: $font-suisse-bold
-        left: 15px
-        top: 45%
-        transform: translateY(-50%)
-        font-size: 48px
-        line-height: 53px
-        color: $magenta
+        font-size: 64px
+        line-height: 66px
+      &-bottom
+        display: flex
+        align-items: center
+        img
+          margin: 0 10px 0 0
+        span
+          font-size: 24px
+          line-height: 47px
+          color: $grey
     &-text
       font-family: $font-suisse-semb
-      font-size: 14px
-      line-height: 18px
+      font-size: 16px
+      line-height: 22px
       text-align: center
       letter-spacing: 0.03em
-      color: #292929
+      color: $grey
       margin: 0 0 17px 0
     &-btn
       margin-bottom: auto
-      padding: 19px 15px 17px
+      padding: 24px 15px 22px
       font-family: $font-suisse-semb
       text-align: center
       display: inline-block
-      font-size: 16px
-      line-height: 21px
+      font-size: 18px
+      line-height: 23px
       letter-spacing: 0.07em
       text-transform: uppercase
       border-radius: 4px
@@ -166,16 +187,7 @@ body
       transition: background-color .3s ease
       &:hover
         background: $green-hover
-    &-more
-      font-family: $font-suisse-semb
-      font-size: 14px
-      line-height: 18px
-      letter-spacing: 0.07em
-      text-decoration-line: underline
-      color: #292929
-      text-align: center
-      &:hover
-        text-decoration: none
+
   &__main
     padding: 80px 0 0 0
     height: 100%
